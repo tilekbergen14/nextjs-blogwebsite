@@ -1,0 +1,19 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #fdfdfd !important;
+  text-decoration: none !important;
+  font-size: 1.2rem !important;
+  font-weight: bold;
+}
+a:hover {
+  color: #364f6b !important;
+}
+
+* {
+  box-sizing: border-box;
+}
