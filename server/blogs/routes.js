@@ -3,7 +3,7 @@ const Blog = require("./model");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const blogs = await Blog.find();
+  const blogs = await Blog.find().sort("-createdAt").limit(6);
   res.json(blogs);
 });
 

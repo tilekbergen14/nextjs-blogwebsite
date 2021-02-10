@@ -1,15 +1,19 @@
 import React from "react";
-
-export default function Blog() {
+import Image from "next/image";
+export default function Blog({ blog }) {
+  const { title, img } = blog;
   return (
     <div className="card mb-5 mx-auto" style={{ width: "18rem" }}>
-      <img className="card-img-top" src="/moon.jpg" alt="Card image cap" />
+      <img
+        className="card-img-top"
+        src={img ? "/moon.jpg" : "/moon.jpg"}
+        width={"100%"}
+        height={190}
+      />
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+        <h5 className="card-title" style={{ height: 100 }}>
+          {title}
+        </h5>
         <a href="#" className="btn btn-primary">
           Go somewhere
         </a>

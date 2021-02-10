@@ -1,0 +1,30 @@
+.list {
+  width: 100%;
+  cursor: pointer;
+}
+.list:hover {
+  border-left: 5px solid #364f6b;
+}
+.admin {
+  position: relative;
+}
+.toright {
+  display: flex;
+  justify-content: flex-end;
+}
+.brbtn {
+  position: absolute;
+  right: 0;
+}
+.ul {
+  height: 200px;
+  overflow-y: scroll;
+}
+.ul::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f0f0f0;
+}
+
+.ul::-webkit-scrollbar-thumb {
+  background-color: #c5c3c3;
+}

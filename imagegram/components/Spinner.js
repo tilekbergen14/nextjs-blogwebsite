@@ -4,15 +4,8 @@ export default function Spinner() {
   return (
     <div
       style={{
-        minHeight: "max-content",
-        width: "100%",
-        height: "100%",
         position: "absolute",
-        zIndex: 5,
-        background: "rgba(51,51,51,0.1)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        top: "50%",
       }}
     >
       <div

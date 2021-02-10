@@ -4,6 +4,11 @@ body {
   margin: 0;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   color: #fdfdfd !important;
   text-decoration: none !important;
@@ -16,4 +21,16 @@ a:hover {
 
 * {
   box-sizing: border-box;
+}
+.btn-primary {
+  background-color: #43dde6 !important;
+  color: #f0f0f0 !important;
+  border: none !important;
+  margin: 10px 0;
+}
+.btn-primary:hover {
+  background-color: #38b8be !important;
+}
+.white {
+  color: #364f6b !important;
 }
