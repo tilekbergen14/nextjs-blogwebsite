@@ -6,7 +6,7 @@ const Blog = mongoose.model(
     title: { type: String, required: true },
     img: String,
     body: String,
-    createdAt: { type: Date, default: new Date() },
+    createdAt: { type: Date, default: Date.now() },
     author: String,
   })
 );

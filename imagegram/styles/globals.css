@@ -34,3 +34,7 @@ a:hover {
 .white {
   color: #364f6b !important;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}

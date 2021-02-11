@@ -2,14 +2,16 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
+import Link from "next/link";
 import styles from "../styles/Admin.module.css";
+import moment from "moment";
 
 export default function admin() {
   const [blogs, setBlogs] = useState();
 
   useEffect(async () => {
     const { data } = await axios.get("http://localhost:5000/blogs");
-    setBlogs(data);
+    setBlogs(data.blogs);
   }, []);
 
   return (
@@ -21,16 +23,24 @@ export default function admin() {
       <ul className={`list-group ${styles.ul}`}>
         {blogs ? (
           blogs.map((blog) => (
-            <li className={`list-group-item ${styles.list}`}>{blog.title}</li>
+            <li
+              key={blog._id}
+              className={`list-group-item d-flex justify-content-between ${styles.list}`}
+            >
+              <span>{blog.title}</span>
+              <span>{moment(blog.createdAt).fromNow()}</span>
+            </li>
           ))
         ) : (
           <Spinner />
         )}
       </ul>
       <div className={`${styles.toright}`}>
-        <button className={`btn btn-primary ${styles.brbtn}`}>
-          Create new blog
-        </button>
+        <Link href="/admin/createblog">
+          <button className={`btn btn-primary ${styles.brbtn}`}>
+            Create new blog
+          </button>
+        </Link>
       </div>
     </div>
   );

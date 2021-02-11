@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
+
 export default function Blog({ blog }) {
-  const { title, img } = blog;
+  const { title, img, createdAt } = blog;
   return (
     <div className="card mb-5 mx-auto" style={{ width: "18rem" }}>
       <img
         className="card-img-top"
-        src={img ? "/moon.jpg" : "/moon.jpg"}
+        src={img ? img : "/moon.jpg"}
         width={"100%"}
         height={190}
       />

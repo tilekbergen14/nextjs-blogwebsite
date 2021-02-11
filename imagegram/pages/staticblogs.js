@@ -38,7 +38,7 @@ export default function blogs({ blogs }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   let res;
   if (context.query) {
     res = await axios.get(

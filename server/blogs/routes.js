@@ -3,8 +3,18 @@ const Blog = require("./model");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const blogs = await Blog.find().sort("-createdAt").limit(6);
-  res.json(blogs);
+  let blogs;
+  if (req.query) {
+    const { page } = req.query;
+    blogs = await Blog.find()
+      .sort("-createdAt")
+      .skip((page - 1) * 6)
+      .limit(6);
+  } else {
+    blogs = await Blog.find().sort("-createdAt").limit(6);
+  }
+  const numberOfBlogs = await Blog.countDocuments();
+  res.json({ blogs, numberOfBlogs });
 });
 
 router.post("/", async (req, res) => {
