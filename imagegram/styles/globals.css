@@ -8,7 +8,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
 a {
   color: #fdfdfd !important;
   text-decoration: none !important;
@@ -37,4 +36,18 @@ a:hover {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.bg-color {
+  background-color: #e6eff9;
+}
+.bg-color-2 {
+  background-color: #ffffff !important;
+}
+
+.border-radius {
+  border-radius: 20px;
+}
+.shadow {
+  box-shadow: 10px 10px 10px #a8aeb4;
 }

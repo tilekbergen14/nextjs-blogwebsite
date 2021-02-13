@@ -8,6 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/blogs/", require("./blogs/routes"));
+app.use("/search/", require("./search/search"));
+app.use("/lessons/", require("./lessons/routes"));
+app.use("/courses/", require("./courses/routes"));
 
 mongoose
   .connect(process.env.CONNECT_DB, {

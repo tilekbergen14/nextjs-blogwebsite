@@ -19,7 +19,7 @@ export default function blogs({ blogs }) {
   };
 
   return (
-    <div className="mt-5">
+    <div className="container mt-5">
       <Head>
         <title>Blogs</title>
       </Head>

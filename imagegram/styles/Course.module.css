@@ -1,0 +1,40 @@
+.horizontalNav {
+  padding: 10px 0 0 10px;
+  width: 220px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 70px);
+  background-color: rgb(240, 232, 232);
+}
+.horizontalNav::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(240, 232, 232);
+}
+.horizontalNav::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 208, 208);
+}
+.body {
+  width: calc(100% - 220px);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.link {
+  color: black !important;
+  margin: 0;
+  cursor: pointer;
+}
+.active {
+  background-color: #43dde6;
+  color: white;
+  margin: 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}

@@ -8,14 +8,15 @@ export default function Navbar() {
       <Link className={styles.link} href="/">
         Home
       </Link>
-
       <Link className={styles.link} href="/blogs/">
         Blogs
       </Link>
       <Link className={styles.link} href="/staticblogs/">
         Static blogs
       </Link>
-
+      <Link className={styles.link} href="/search/">
+        Search
+      </Link>
       <Link className={styles.link} href="/admin/">
         Admin
       </Link>
